@@ -51,7 +51,6 @@ vcf_files = {
 	"chrysler1.xml",
 	"santafe.xml",
 	"ambocycle.xml",
-	"kluger3.xml",
 	"lighttanker.xml",
-	"police4.xml"
+	"touranger.xml"
 }
