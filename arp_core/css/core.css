@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vh;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ui-off {
+    display: none;
+    height: 100vh;
+}
+
+h1 {
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2vh;
+    text-align: center;
+    color: #05974c;
+}
+
+h2 {
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+    font-weight: 700;
+    color: #05974c;
+}
+
+code {
+    color: #05974c;
+    font-weight: 700;
+}
+
+ul {
+    list-style: disc outside none;
+    text-align: left;
+}
+
+ul li {
+    padding: 5 0;
+}
+
+.logo-colour {
+    content: url('../images/logos/primary_colour_logo.png');
+}
+
+.logo-mono {
+    content: url('../images/logos/primary_mono_logo.png');
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20vh;
+    background: rgb(5,151,76);
+    background: linear-gradient(180deg, rgba(5,151,76,1) 0%, rgba(5,151,76,0) 100%);
+    text-align: center;
+}
+
+.footer {
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    bottom: 0;
+    background: rgb(5,151,76);
+    background: linear-gradient(0deg, rgba(5,151,76,1) 0%, rgba(5,151,76,0) 100%);
+    text-align: center;
+}
+
+.nav .logo-mono {
+    height: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.menus {
+    position: fixed;
+    top: 25vh;
+    bottom: 25vh;
+    width: 100vw;
+}
+
+.menu-theme {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 2%;
+    color: #fff;
+    padding: 1%;
+}
+
+.menus .menu-left {
+    position: absolute;
+    left: 30vw;
+    width: 20vw;
+    height: 100%;
+}
+
+.menus .menu-right {
+    position: absolute;
+    left: 55vw;
+    width: 40vw;
+    height: 100%;
+}
+
+.menus #loading-info {
+    position: absolute;
+    left: 30vw;
+    width: 40vw;
+    height: 100%;
+}
+
+.menus #pluginScreenWindow {
+    position: absolute;
+    left: 30vw;
+    width: 40vw;
+    height: 100%;
+}
+
+.header-menus {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20vh;
+}
+
+.header-menus .messagebox {
+    position: absolute;
+    /*top: 5vh;
+    right: 5vw;*/
+    width: 20vw;
+    height: fit-content;
+    max-height: 14vh;
+    opacity: 0.2;
+    animation: fadein 10s;
+    -moz-animation: fadein 10s; /* Firefox */
+    -webkit-animation: fadein 10s; /* Safari and Chrome */
+    -o-animation: fadein 10s; /* Opera */
+}
+
+@keyframes fadein {
+    0% {
+        opacity:1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity:0.2;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    0% {
+        opacity:1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity:0.2;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    0% {
+        opacity:1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity:0.2;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    0% {
+        opacity:1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity:0.2;
+    }
+}
+
+.message {
+    width: 400px;
+    margin: 0 auto;
+    opacity: 0;
+    text-align: center;
+}
+
+
+.pld {
+    display: block;
+    position: fixed;
+}
+
+.minimap {
+    display: block;
+    position: fixed;
+}
+
+#mm-padding {
+    padding: 5%;
+}
+
+.pld-info {
+    font-weight: 700;
+    color: #05974c;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 5 10;
+    border-radius: 10px;
+}
+
+.pld-title {
+    margin-bottom: 0.5vh;
+    margin-top: 0.5vh;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.95vh;
+    font-weight: 700;
+}
+
+.limit {
+    display: inline-block;
+    text-align: right;
+    font-weight: 700;
+    color: #252525;
+    background: rgba(235, 237, 240, 0.85);
+    border: 4.5px solid rgba(255, 0, 0, 0.85);
+    padding: 0.5 4.5;
+    border-radius: 10px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.warning {
+    display: none;
+    position: fixed;
+}
+
+.controller {
+    font-weight: 700;
+    padding: 5 10;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#alert-on {
+    background: rgba(255, 0, 0, 0.85);
+    color: #fff;
+    display: none;
+}
+
+#siren-on, #lights-on {
+    background: #05974c;
+    color: #fff;
+    display: none;
+}
+
+#alert-off, #siren-off, #lights-off {
+    color: #828E99;
+    background: rgba(235, 237, 240, 0.85);
+    opacity: 0.2;
+}
+
+#alert-off, #alert-on {
+    width: 4vw;
+}
+
+#lights-off, #lights-on, #siren-off, #siren-on {
+    width: 1.5vw;
+}
+
+.talking {
+    color: red;
+}
+
+#center-text {
+    position: absolute;
+    left: 25vw;
+    top: 1vh;
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+}
+
+.tokovoipInfo {
+    font-weight: 700;
+    padding: 5 10;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    color: #05974c;
+    background: rgba(0, 0, 0, 0.85);
+    text-transform: uppercase;
+    opacity: 0.2;
+}
+
+.pluginScreen {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
