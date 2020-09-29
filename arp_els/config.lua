@@ -53,11 +53,11 @@ keyboard = {
 
 controller = {
 	modifyKey = 73,
-	stageChange = 80,
+	stageChange = 184,
 	takedown = nil,
 	siren = {
-		tone_one = 59,
-		tone_two = 85,
-		tone_three = 172,
+		tone_one = 85,
+		tone_two = 172,
+		tone_three = nil,
 	},
 }
