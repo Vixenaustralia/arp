@@ -10,7 +10,6 @@ vcf_files = {
 	"commandvan.xml",
 	"divvyvan.xml",
 	"dogute.xml",
-	"evoke.xml",
 	"falcon1.xml",
 	"fordranger.xml",
 	"FIRETRUK.xml",
