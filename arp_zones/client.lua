@@ -56,16 +56,7 @@ Citizen.CreateThread(function()
         local playercoords = GetEntityCoords(player)
         local currzone = GetNameOfZone(playercoords.x, playercoords.y, playercoords.z)
 
-        if currzone == "DELSOL" then
-            if showui == false then
-            TriggerEvent("zones:show", true)
-            end
-            SendNUIMessage({
-                type = "zones",
-                zn = "La Pureta",
-                influencer = "Armenian Mob"
-            })
-        elseif currzone == "DAVIS" then
+        if currzone == "DAVIS" then
             if showui == false then
                 TriggerEvent("zones:show", true)
                 end  
@@ -74,6 +65,15 @@ Citizen.CreateThread(function()
                     zn = "Davis",
                     influencer = "Ballas"
                 })
+            --[[elseifif currzone == "DELSOL" then
+            if showui == false then
+                TriggerEvent("zones:show", true)
+                end
+                SendNUIMessage({
+                    type = "zones",
+                    zn = "La Pureta",
+                    influencer = "Armenian Mob"
+                })]]
         elseif currzone == "CHAMH" then
             if showui == false then
                 TriggerEvent("zones:show", true)
@@ -83,7 +83,7 @@ Citizen.CreateThread(function()
                     zn = "Chamberlain Hills",
                     influencer = "Families"
                 })
-            elseif currzone == "KOREAT" then
+            --[[elseif currzone == "KOREAT" then
                 if showui == false then
                     TriggerEvent("zones:show", true)
                     end  
@@ -91,7 +91,7 @@ Citizen.CreateThread(function()
                         type = "zones",
                         zn = "Little Seoul",
                         influencer = "Kkangpae and Los Santos Triads"
-                    })
+                    })]]
                 elseif currzone == "SLAB" then
                     if showui == false then
                         TriggerEvent("zones:show", true)
@@ -101,7 +101,7 @@ Citizen.CreateThread(function()
                             zn = "Stab City",
                             influencer = "Lost Motorcycle Club"
                         })
-                    elseif currzone == "EBURO" then
+                    --[[elseif currzone == "EBURO" then
                         if showui == false then
                             TriggerEvent("zones:show", true)
                             end 
@@ -109,7 +109,7 @@ Citizen.CreateThread(function()
                                 type = "zones",
                                 zn = "El Burro Heights",
                                 influencer = "Marabunta Grande"
-                            })
+                            })]]
                         elseif currzone == "RANCHO" then
                             if showui == false then
                                 TriggerEvent("zones:show", true)
