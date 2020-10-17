@@ -56,8 +56,8 @@ controller = {
 	stageChange = 175,
 	takedown = nil,
 	siren = {
-		tone_one = 85,
-		tone_two = 172,
-		tone_three = nil,
+		tone_one = 173,
+		tone_two = 85,
+		tone_three = 172,
 	},
 }

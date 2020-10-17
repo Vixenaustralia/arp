@@ -47,7 +47,7 @@
 	</ACORONAS>
 	<!-- SOUNDS -->
 	<SOUNDS>
-		<MainHorn InterruptsSiren="true" AudioString="VEHICLES_HORNS_CAR_HORN_MED_9" />
+		<MainHorn InterruptsSiren="true" AudioString="SIRENS_AIRHORN" />
 		<ManTone1 AllowUse="true" AudioString="VEHICLES_HORNS_SIREN_1" />
 		<ManTone2 AllowUse="true" AudioString="VEHICLES_HORNS_SIREN_2" />
 		<SrnTone1 AllowUse="true" AudioString="VEHICLES_HORNS_SIREN_1" />
