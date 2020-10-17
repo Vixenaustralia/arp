@@ -22,6 +22,27 @@ body {
     height: 100vh;
 }
 
+.beforeload {
+    display: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #252525;
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+}
+
+#NSLlogo {
+    height: 10vh;
+    position: fixed;
+    top: 45vh;
+    left: 45vw;
+}
+
+#notice {
+    display: none;
+}
+
 h1 {
     line-height: 1;
     text-transform: uppercase;
