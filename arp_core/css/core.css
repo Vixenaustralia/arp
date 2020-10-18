@@ -189,8 +189,7 @@ ul li {
 
 .header-menus .messagebox {
     position: absolute;
-    top: 5vh;
-    right: 5vw;
+    display: none;
     width: 20vw;
     height: fit-content;
     max-height: 14vh;
