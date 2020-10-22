@@ -25,5 +25,27 @@ $(document).ready(function(){
     setInterval(nextBackground, 10000);
     
     header.css('background-image', backgrounds[0]);
-
 });
+
+setTimeout(function() {
+    $('#NSLlogo').fadeIn('slow');
+}, 0);
+
+setTimeout(function() {
+    $('#NSLlogo').fadeOut('slow');
+}, 3000);
+
+setTimeout(function() {
+    $('#notice').fadeIn('slow');
+}, 4000);
+
+setTimeout(function() {
+    $('#notice').fadeOut('slow');
+}, 9000);
+
+setTimeout(function() {
+    $('.beforeload').fadeOut('slow');
+    $('#load-header').fadeIn('slow');
+    $('#load-menu').fadeIn('slow');
+    $('#load-footer').fadeIn('slow');
+}, 10000);

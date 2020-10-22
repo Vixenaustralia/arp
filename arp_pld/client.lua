@@ -59,7 +59,7 @@ end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1000)
+		Citizen.Wait(2000)
 
 		local mapsize = GetMinimapAnchor()
         local mmx = mapsize.x * 100 .. "%"
