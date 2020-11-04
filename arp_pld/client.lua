@@ -166,7 +166,7 @@ Citizen.CreateThread(
 				number = gps[nearest.i].code
 				TriggerEvent("pld:gps", true)
 			end
-			Wait(0)
+			Wait(3000)
 		end
 	end
 )
