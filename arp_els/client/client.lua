@@ -417,12 +417,12 @@ Citizen.CreateThread(function()
                 end
             end 
 
-        elseif IsPauseMenuActive() then
-                TriggerEvent('controller:off', true)
+        --elseif IsPauseMenuActive() then
+                --TriggerEvent('controller:off', true)
 
-        else
+        --else
 
-            TriggerEvent("controller:off", true)
+            --TriggerEvent("controller:off", true)
         
         end
 
