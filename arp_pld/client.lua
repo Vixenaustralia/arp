@@ -17,6 +17,7 @@ local showpld = true
 local street = "No street found!"
 local direction = "N"
 local suburb = "San Andreas"
+local postcode = "9900"
 
 RegisterNetEvent("pld:on")
 AddEventHandler("pld:on", function(value)
@@ -36,24 +37,14 @@ AddEventHandler("pld:off", function(value)
     })
 end)
 
-
 RegisterNetEvent("pld:location")
 AddEventHandler("pld:location", function(value) 
     SendNUIMessage({
         type = "pld",
         dir = direction,
         st = street,
-        sub = suburb
-    })
-end)
-
-RegisterNetEvent("pld:location")
-AddEventHandler("pld:location", function(value) 
-    SendNUIMessage({
-        type = "pld",
-        dir = direction,
-        st = street,
-        sub = suburb
+		sub = suburb,
+		pc = postcode
     })
 end)
 
@@ -83,7 +74,7 @@ Citizen.CreateThread(function()
 		
 		local pos = GetEntityCoords(PlayerPedId())
 		local var1, var2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z, Citizen.ResultAsInteger(), Citizen.ResultAsInteger())
-        local current_zone = GetLabelText(GetNameOfZone(pos.x, pos.y, pos.z))
+		local current_zone = GetLabelText(GetNameOfZone(pos.x, pos.y, pos.z))
 		
 		for k,v in pairs(directions)do
 			direction = GetEntityHeading(PlayerPedId())
@@ -98,7 +89,190 @@ Citizen.CreateThread(function()
 			TriggerEvent("pld:on", true)
         	if GetStreetNameFromHashKey(var1) ~= nil then
             	street = GetStreetNameFromHashKey(var1)
-            	suburb = current_zone
+				suburb = current_zone
+				
+				if GetNameOfZone(pos.x, pos.y, pos.z) == "AIRP" then
+					postcode = "9901"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ALAMO" then
+					postcode = "9958"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ALTA" then
+					postcode = "9924"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ARMYB" then
+					postcode = "9955"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BANHAMC" then
+					postcode = "9933"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BANNING" then
+					postcode = "9905"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BEACH" then
+					postcode = "9914"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BHAMCA" then
+					postcode = "9933"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BRADP" then
+					postcode = "9966"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BRADT" then
+					postcode = "9966"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "BURTON" then
+					postcode = "9926"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CALAFB" then
+					postcode = "9962"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CANNY" then
+					postcode = "9962"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CCREAK" then
+					postcode = "9962"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CHAMH" then
+					postcode = "9912"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CHIL" then
+					postcode = "9935"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CHU" then
+					postcode = "9963"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CMSW" then
+					postcode = "9964"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "CYPRE" then
+					postcode = "9906"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DAVIS" then
+					postcode = "9911"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DELBE" then
+					postcode = "9930"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DELPE" then
+					postcode = "9930"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DELSOL" then
+					postcode = "9904"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DESRT" then
+					postcode = "9954"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DOWNT" then
+					postcode = "9916"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "DTVINE" then
+					postcode = "9925"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "EAST_V" then
+					postcode = "9922"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "EBURO" then
+					postcode = "9907"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ELGORL" then
+					postcode = "9966"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ELYSIAN" then
+					postcode = "9902"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "GALFISH" then
+					postcode = "9961"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "GOLF" then
+					postcode = "9932"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "GRAPES" then
+					postcode = "9960"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "GREATC" then
+					postcode = "9952"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "HARMO" then
+					postcode = "9953"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "HAWICK" then
+					postcode = "9923"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "HORS" then
+					postcode = "9922"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "HUMLAB" then
+					postcode = "9959"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "JAIL" then
+					postcode = "9954"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "KOREAT" then
+					postcode = "9915"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "LACT" then
+					postcode = "9920"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "LAGO" then
+					postcode = "9955"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "LDAM" then
+					postcode = "9920"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "LEGSQU" then
+					postcode = "9916"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "LMESA" then
+					postcode = "9919"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "LOSPUER" then
+					postcode = "9904"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MIRR" then
+					postcode = "9921"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MORN" then
+					postcode = "9929"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MOVIE" then
+					postcode = "9928"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MTCHIL" then
+					postcode = "9961"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MTGORDO" then
+					postcode = "9966"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MTJOSE" then
+					postcode = "9956"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "MURRI" then
+					postcode = "9909"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "NCHU" then
+					postcode = "9963"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "NOOSE" then
+					postcode = "9908"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "OCEANA" then
+					postcode = "9900"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PALCOV" then
+					postcode = "9965"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PALETO" then
+					postcode = "9965"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PALFOR" then
+					postcode = "9965"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PALHIGH" then
+					postcode = "9908"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PALMPOW" then
+					postcode = "9959"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PBLUFF" then
+					postcode = "9931"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PBOX" then
+					postcode = "9916"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "PROCOB" then
+					postcode = "9965"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "RANCHO" then
+					postcode = "9910"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "RGLEN" then
+					postcode = "9932"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "RICHM" then
+					postcode = "9932"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ROCKF" then
+					postcode = "9928"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "RTRAK" then
+					postcode = "9954"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "SANAND" then
+					postcode = "9900"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "SANCHIA" then
+					postcode = "9959"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "SANDY" then
+					postcode = "9958"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "SKID" then
+					postcode = "9917"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "SLAB" then
+					postcode = "9957"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "STAD" then
+					postcode = "9904"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "STRAW" then
+					postcode = "9913"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "TATAMO" then
+					postcode = "9920"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "TERMINA" then
+					postcode = "9903"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "TEXTI" then
+					postcode = "9918"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "TONGVAH" then
+					postcode = "9950"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "TONGVAV" then
+					postcode = "9951"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "VCANA" then
+					postcode = "9914"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "VESP" then
+					postcode = "9914"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "VINE" then
+					postcode = "9925"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "WINDF" then
+					postcode = "9959"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "WVINE" then
+					postcode = "9927"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ZANCUDO" then
+					postcode = "9955"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ZP_ORT" then
+					postcode = "9903"
+				elseif GetNameOfZone(pos.x, pos.y, pos.z) == "ZP_UAR" then
+					postcode = "9959"
+				else
+					postcode = "ERROR"
+				end
+
             	TriggerEvent("pld:location", true)
 			end
 		end

@@ -3,15 +3,15 @@ $(document).ready(function(){
     var header = $('body');
     
     var backgrounds = new Array(
-        'url(../images/stills/bg1.jpg)',
-        'url(../images/stills/bg2.jpg)',
-        'url(../images/stills/bg3.jpg)',
-        'url(../images/stills/bg4.jpg)',
         'url(../images/stills/bg5.jpg)',
         'url(../images/stills/bg6.jpg)',
         'url(../images/stills/bg7.jpg)',
         'url(../images/stills/bg8.jpg)',
-        'url(../images/stills/bg9.jpg)'
+        'url(../images/stills/bg9.jpg)',
+        'url(../images/stills/bg1.jpg)',
+        'url(../images/stills/bg2.jpg)',
+        'url(../images/stills/bg3.jpg)',
+        'url(../images/stills/bg4.jpg)'
     );
     
     var current = 0;

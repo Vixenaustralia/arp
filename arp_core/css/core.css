@@ -168,7 +168,7 @@ ul li {
 
 .menus #loading-info {
     position: absolute;
-    left: 30vw;
+    left: 55vw;
     width: 40vw;
     height: 100%;
 }
@@ -267,12 +267,14 @@ ul li {
 }
 
 .pld-info {
-    margin-top: 5vh;
+    margin-top: 0.5vh;
+    margin-bottom: none;
     font-weight: 700;
     color: #05974c;
     background: rgba(0, 0, 0, 0.85);
     padding: 5 10;
     border-radius: 10px;
+    width: fit-content;
 }
 
 .pld-title {

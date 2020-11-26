@@ -9,6 +9,7 @@ $(function(){
                 document.getElementById("direction").innerHTML = item.dir;
                 document.getElementById("street").innerHTML = item.st;
                 document.getElementById("suburb").innerHTML = item.sub;
+                document.getElementById("postcode").innerHTML = item.pc;
                 if (item.pldui === true) {
                     $('.pld').show();
                     $('.minimap').show();

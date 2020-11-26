@@ -44,7 +44,7 @@ Citizen.CreateThread(function()
         local streethash = GetStreetNameAtCoord(playerloc.x, playerloc.y, playerloc.z)
         street = GetStreetNameFromHashKey(streethash)
 
-    if IsPedInAnyVehicle(GetPlayerPed(-1)) then
+    if IsPedInAnyVehicle(GetPlayerPed(-1)) and (IsPauseMenuActive() == false) then
             if street == "Joshua Rd" then
                 speedlimit = 100
             elseif street == "East Joshua Road" then
