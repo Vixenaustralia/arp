@@ -276,6 +276,44 @@ AddEventHandler("els:setTakedownState_c", function(sender)
     end 
 end)
 
+local eModelsWithSet2 =
+{	
+	"firetruk",
+	"firetruk2",
+    "lighttanker",
+    "heavyhazmat",
+	"safskluger",
+}
+
+local eModelsWithSet3 =
+{	
+	"ambulance",
+	"ambocycle",
+    "amborescuevan",
+    "santafe",
+	"volunteerambulance",
+}
+
+function useSecondSrn(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #eModelsWithSet2, 1 do
+		if model == GetHashKey(eModelsWithSet2[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function useThirdSrn(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #eModelsWithSet3, 1 do
+		if model == GetHashKey(eModelsWithSet3[i]) then
+			return true
+		end
+	end
+	return false
+end
+
 function toggleSirenMute(veh, toggle)
     if DoesEntityExist(veh) and not IsEntityDead(veh) then
         DisableVehicleImpactExplosionActivation(veh, toggle)
@@ -316,22 +354,44 @@ function setSirenState(veh, newstate)
             if newstate == 1 then
 
                 m_soundID_veh[veh] = GetSoundId()
+                if useSecondSrn(veh) then
+                PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_DELTA", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
+                toggleSirenMute(veh, true)
+                elseif useThirdSrn(veh) then
+                PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_GOLF", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
+                toggleSirenMute(veh, true)
+                else
                 PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_ALPHA", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
                 toggleSirenMute(veh, true)
+                end
                 
             elseif newstate == 2 then
 
-                m_soundID_veh[veh] = GetSoundId() 
+                m_soundID_veh[veh] = GetSoundId()
+                if useSecondSrn(veh) then
+                PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_ECHO", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
+                toggleSirenMute(veh, true)
+                elseif useThirdSrn(veh) then
+                PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_HOTEL", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
+                toggleSirenMute(veh, true)
+                else
                 PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_BRAVO", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
                 toggleSirenMute(veh, true)
-                toggleSirenMute(veh, true)
+                end
                 
             elseif newstate == 3 then
 
                 m_soundID_veh[veh] = GetSoundId()
+                if useSecondSrn(veh) then
+                PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_FOXTROT", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
+                toggleSirenMute(veh, true)
+                elseif useThirdSrn(veh) then
+                PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_FOXTROT", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
+                toggleSirenMute(veh, true)
+                else
                 PlaySoundFromEntity(m_soundID_veh[veh], "SIREN_CHARLIE", veh, "DLC_WMSIRENS_SOUNDSET", 0, 0)
                 toggleSirenMute(veh, true)
-                toggleSirenMute(veh, true)
+                end
                 
             else
                 toggleSirenMute(veh, true)
