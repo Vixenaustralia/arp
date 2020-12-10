@@ -112,7 +112,7 @@ Citizen.CreateThread(function()
             elseif street == "Ineseno Road" then
                 speedlimit = 50
             elseif street == "West Eclipse Blvd" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Playa Vista" then
                 speedlimit = 50
             elseif street == "Bay City Ave" then
@@ -132,15 +132,15 @@ Citizen.CreateThread(function()
             elseif street == "Prosperity St" then
                 speedlimit = 50
             elseif street == "San Andreas Ave" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "North Rockford Dr" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "South Rockford Dr" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Marathon Ave" then
                 speedlimit = 50
             elseif street == "Boulevard Del Perro" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Cougar Ave" then
                 speedlimit = 50
             elseif street == "Liberty St" then
@@ -160,7 +160,7 @@ Citizen.CreateThread(function()
             elseif street == "Melanoma St" then
                 speedlimit = 50
             elseif street == "Palomino Ave" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Invention Ct" then
                 speedlimit = 50
             elseif street == "Imagination Ct" then
@@ -178,13 +178,13 @@ Citizen.CreateThread(function()
             elseif street == "Adam's Apple Blvd" then
                 speedlimit = 50
             elseif street == "Alta St" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Integrity Way" then
                 speedlimit = 50
             elseif street == "Swiss St" then
                 speedlimit = 50
             elseif street == "Strawberry Ave" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Capital Blvd" then
                 speedlimit = 50
             elseif street == "Crusade Rd" then
@@ -192,7 +192,7 @@ Citizen.CreateThread(function()
             elseif street == "Innocence Blvd" then
                 speedlimit = 50
             elseif street == "Davis Ave" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Little Bighorn Ave" then
                 speedlimit = 50
             elseif street == "Roy Lowenstein Blvd" then
@@ -208,7 +208,7 @@ Citizen.CreateThread(function()
             elseif street == "Covenant Ave" then
                 speedlimit = 50
             elseif street == "Dutch London St" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Signal St" then
                 speedlimit = 50
             elseif street == "Elysian Fields Fwy" then
@@ -348,7 +348,7 @@ Citizen.CreateThread(function()
             elseif street == "Mirror Pl" then
                 speedlimit = 50
             elseif street == "El Rancho Blvd" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Olympic Fwy" then
                 speedlimit = 100
             elseif street == "Fudge Ln" then
@@ -368,7 +368,7 @@ Citizen.CreateThread(function()
             elseif street == "Orchardville Ave" then
                 speedlimit = 50
             elseif street == "Popular St" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Buccaneer Way" then
                 speedlimit = 50
             elseif street == "Abattoir Ave" then
@@ -384,7 +384,7 @@ Citizen.CreateThread(function()
             elseif street == "Morningwood Blvd" then
                 speedlimit = 50
             elseif street == "Dorset Dr" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Caesars Place" then
                 speedlimit = 50
             elseif street == "Spanish Ave" then
@@ -406,9 +406,9 @@ Citizen.CreateThread(function()
             elseif street == "Mt Haan Rd" then
                 speedlimit = 50
             elseif street == "Elgin Ave" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Hawick Ave" then
-                speedlimit = 50
+                speedlimit = 80
             elseif street == "Meteor St" then
                 speedlimit = 50
             elseif street == "Alta Pl" then
@@ -482,7 +482,7 @@ Citizen.CreateThread(function()
 			elseif street == "Strangeways Dr" then
 				speedlimit = 50
             else
-                speedlimit = 0
+                speedlimit = 50
             end
 
             if showspeedlimit == true then
